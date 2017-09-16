@@ -1,10 +1,13 @@
 {
-  "name": "RBot",
+  "name": "Authbot",
   "version": "0.1.0",
-  "description": "A Discord bot with some functions!",
+  "description": "Authorize command for a player",
   "main": "bot.js",
   "author": "RHG",
   "license": "ISC",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "discord.js": "^11.1.0"
   }
