@@ -1,0 +1,11 @@
+{
+  "name": "RBot",
+  "version": "0.1.0",
+  "description": "A Discord bot with some functions!",
+  "main": "bot.js",
+  "author": "RHG",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.1.0"
+  }
+}
