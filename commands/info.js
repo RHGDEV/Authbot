@@ -8,7 +8,7 @@ module.exports.run = (bot, message, args) => {
 	    .addField("ID", message.author.id)
 	    .addField("Date Joined", message.member.joinedAt)
 	    .addField("Date Created", message.author.createdAt)
-	    .url("https://github.com/CrawlingArc33/Authbot")
+	    .setURL("https://github.com/CrawlingArc33/Authbot")
 	    .setFooter(`${bot.user.username}'s userinfomation system`);
 	  message.channel.send({embed: em});
 }
