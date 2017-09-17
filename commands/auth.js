@@ -10,7 +10,7 @@ module.exports.run = (bot, message, args) => {
 		.setThumbnail(message.author.displayAvatarURL)
 		.setColor(`#FF0000`)
 		.setTimestamp()
-		.url("https://github.com/CrawlingArc33/Authbot")
+		.setURL("https://github.com/CrawlingArc33/Authbot")
 		.setFooter('Already authorized!');
 		
 		message.channel.send({embed: em});
@@ -33,7 +33,7 @@ module.exports.run = (bot, message, args) => {
 			.setThumbnail(message.author.displayAvatarURL)
 			.setColor(`#FF0000`)
 			.setTimestamp()
-			.url("https://github.com/CrawlingArc33/Authbot")
+			.setURL("https://github.com/CrawlingArc33/Authbot")
 			.setFooter('ERROR');
 
 			message.channel.send({embed: em});
@@ -46,7 +46,7 @@ module.exports.run = (bot, message, args) => {
 			.setThumbnail(message.author.displayAvatarURL)
 			.setColor(`#00FF00`)
 			.setFooter(`Now authorized on ${message.guild.name}`)
-			.url("https://github.com/CrawlingArc33/Authbot")
+			.setURL("https://github.com/CrawlingArc33/Authbot")
 			.setTimestamp();
 	
 			message.channel.send({embed: em});
@@ -65,7 +65,7 @@ module.exports.run = (bot, message, args) => {
 		.setThumbnail(message.author.displayAvatarURL)
 		.setColor(`#FF0000`)
 		.setTimestamp()
-		.url("https://github.com/CrawlingArc33/Authbot")
+		.setURL("https://github.com/CrawlingArc33/Authbot")
 		.setFooter('ERROR');
 		
 		message.channel.send({embed: em});
@@ -78,7 +78,7 @@ module.exports.run = (bot, message, args) => {
 		.setThumbnail(message.author.displayAvatarURL)
     		.setColor(`#00FF00`)
 		.setFooter(`Now authorized on ${message.guild.name}`)
-		.url("https://github.com/CrawlingArc33/Authbot")
+		.setURL("https://github.com/CrawlingArc33/Authbot")
 		.setTimestamp();
 	
 	message.channel.send({embed: em});
