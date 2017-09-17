@@ -20,13 +20,10 @@ module.exports.run = (bot, message, args) => {
 		
 		message.guild.createRole({
 			name: 'Authorized',
-			color: 'BLUE',
-		}, "I just like making roles!")
+			color: 'GREEN',
+			position: 0
+		}, "I didn't find this role so I made it!")
 		.then (role => {
-		if (!message.guild.roles.find('name', "Authorized")){
-			console.log("Unabled to create role!")
-			return;
-		};
 		if (message.guild.roles.find('name', 'Authorized').comparePositionTo(message.guild.me.highestRole) > 0) {
 			let em = new Discord.RichEmbed()
 			.setTitle(`${message.author.username}#${message.author.discriminator}`)
@@ -38,7 +35,7 @@ module.exports.run = (bot, message, args) => {
 			.setFooter('ERROR');
 
 			message.channel.send({embed: em});
-			return
+			return;
 			};
 		message.member.addRole(message.guild.roles.find('name', 'Authorized'), "User has been authorized with AuthBot!")
 		let em = new Discord.RichEmbed()
@@ -50,7 +47,7 @@ module.exports.run = (bot, message, args) => {
 			.setTimestamp();
 	
 			message.channel.send({embed: em});
-			return
+			return;
 		});
 	}
 	if (!message.guild.roles.find('name', "Authorized")){
@@ -68,7 +65,7 @@ module.exports.run = (bot, message, args) => {
 		.setFooter('ERROR');
 		
 		message.channel.send({embed: em});
-		return
+		return;
 		}
 	message.member.addRole(message.guild.roles.find('name', 'Authorized'), "User has been authorized with AuthBot!")
 	let em = new Discord.RichEmbed()
