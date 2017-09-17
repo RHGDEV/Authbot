@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = (bot, message, args) => {
 	var gid = message.guild.id
 	if (message.member.roles.find('name', 'Authorized')){
 		let em = new Discord.RichEmbed()
