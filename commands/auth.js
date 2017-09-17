@@ -21,7 +21,11 @@ module.exports.run = (bot, message, args) => {
 		message.guild.createRole({
 			name: 'Authorized',
 			color: 'BLUE',
-		});
+		}, "I just like making roles!");
+	}.then (role => {
+	if (!message.guild.roles.find('name', "Authorized")){
+		console.log("Unabled to create role!")
+		return;
 	};
 	if (message.guild.roles.find('name', 'Authorized').comparePositionTo(message.guild.me.highestRole) > 0) {
 		let em = new Discord.RichEmbed()
@@ -46,6 +50,8 @@ module.exports.run = (bot, message, args) => {
 	.setTimestamp();
 	
 	message.channel.send({embed: em});
+	};
+	
 	
 }
 
