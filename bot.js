@@ -6,7 +6,7 @@ const prefix = process.env.BOT_PREFIX
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
-const creatorid = process.env.EBALL
+const creatorid = process.env.MASTER_ID
 
 
 
