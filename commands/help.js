@@ -9,7 +9,7 @@ module.exports.run = (bot, message, args) => {
 	 .addField(`${prefix}info`, `Get your infomation about your account.`)
 	 .addField(`${prefix}embed`, `Create some text that's embed!`)
 	 .addField(`${prefix}invite`, `Get an invite to invite the bot to your server!`)
-	 .addField(`${prefix}repeat`, `let's the bot repeat what you say!`)
+	 .addField(`${prefix}repeat`, `let's the bot repeat what you say!`);
 
 	message.channel.send({embed: em});
 }
