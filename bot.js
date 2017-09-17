@@ -44,7 +44,7 @@ bot.on("ready", () => {
   bot.user.setGame(prefix+"help | " + bot.guilds.array().length +" guilds", `https://twitch.tv/AuthBot`);
 });
 
-bot.on("message", async message => {
+bot.on("message", message => {
     if(message.author.bot) return;
 	
     if(message.channel.type === "dm"){
