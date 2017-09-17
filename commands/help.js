@@ -1,9 +1,7 @@
-const Discord = require("discord.js");
-const config = require("../config.json");
-var prefix = config.prefix
+var prefix = process.env.BOT_PREFIX
 
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = (bot, message, args) => {
 
 	//let msg = await message.channel.send(`${message.author} My commands have been private messaged to you! `, {tts: true})
 
