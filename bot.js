@@ -59,8 +59,6 @@ bot.on("message", message => {
 
     let cmd = bot.commands.get(mArray[0].slice(prefix.length));
     if(cmd){
-	  // Let's just toss a quick update to the #of-guilds
-	  bot.user.setGame(prefix+"help | " + bot.guilds.array().length +" guilds", `https://twitch.tv/AuthBot`);
       // Log this action
       console.log(`MSG | NAME: ${message.author.username} | MSG: ${message.content} | GUILD: ${message.guild} | CHANNEL: ${message.channel.name}`);
       // remove the responder
@@ -71,7 +69,19 @@ bot.on("message", message => {
 });
 
 bot.on('guildCreate', guild => {
+  // Quick Guild update!
+  bot.user.setGame(prefix+"help | " + bot.guilds.array().length +" guilds", `https://twitch.tv/AuthBot`);
+  // Then tell the console
   console.log(`~~~~~~~~~~~~~~~~~~ JOIN ~~~~~~~~~~~~~~~~~~`);
+  console.log(`Owner Name: ${guild.owner.user.username} | Name: ${guild.name} | ID: ${guild.id}`);
+  console.log(`~~~`);
+})
+
+bot.on('guildDelete', guild => {
+  // Quick Guild update!
+  bot.user.setGame(prefix+"help | " + bot.guilds.array().length +" guilds", `https://twitch.tv/AuthBot`);
+  // Then tell the console
+  console.log(`~~~~~~~~~~~~~~~~~~ LEAVE ~~~~~~~~~~~~~~~~~~`);
   console.log(`Owner Name: ${guild.owner.user.username} | Name: ${guild.name} | ID: ${guild.id}`);
   console.log(`~~~`);
 })
