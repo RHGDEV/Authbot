@@ -39,7 +39,7 @@ module.exports.run = (bot, message, args) => {
 
 			message.channel.send({embed: em});
 			return
-			}
+			};
 		message.member.addRole(message.guild.roles.find('name', 'Authorized'), "User has been authorized with AuthBot!")
 		let em = new Discord.RichEmbed()
 			.setTitle(`${message.author.username}#${message.author.discriminator}`)
@@ -51,7 +51,7 @@ module.exports.run = (bot, message, args) => {
 	
 			message.channel.send({embed: em});
 			return
-			};
+		});
 	}
 	if (!message.guild.roles.find('name', "Authorized")){
 		console.log("Unabled to create role!")
