@@ -1,3 +1,4 @@
+const Discord = require("discord.js");
 var prefix = process.env.BOT_PREFIX
 
 
