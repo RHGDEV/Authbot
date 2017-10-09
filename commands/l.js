@@ -5,11 +5,11 @@ module.exports.run = (bot, message, args) => {
          console.log(`[LEAVE ATTEMPT] ${message.author.username}#${message.author.discriminator} | ${message.guild.name} | ${message.channel.name}`);
          return;
        }
-    bot.guilds.forEach(async (guil, id) => {
-           if(guil.id == args[1]){
-              guil.leave()
-              return;
-           }
+    bot.guilds.forEach(guil, id) => {
+         if(guil.id == args[1]){
+             guil.leave()
+             return;
+         }
       });
       console.log(`[MANUAL LEAVE] Guild not found!`);
       message.channel.send("Guild wasn't found in my list!")
